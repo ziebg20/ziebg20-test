@@ -29,12 +29,21 @@ body {
     object-fit: cover; /* This ensures the content covers the area without distorting aspect ratio */
 }
 
+.form {
+    margin: 0;
+}
+
+/* removed to fix formatting issues 
 .small-jumbotron {
     height: 70vh;
-}
+}*/
 
 nav {
     text-align: center;
+}
+
+.cart-button-container {
+    padding: 5px; 
 }
 
 .button {
@@ -201,13 +210,32 @@ footer {
     margin-top: 5vh;
 }
 
-.cart {
+#cart {
     top: 10px;
     right: 10px;
     cursor: pointer;
 }
 
-.cartDetails {
+#cartDetails {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 0;
+    z-index: 1001; /* Ensure it's above other content */
+}
+
+#cartDetails.open {
+    width: 300px; /* Or whatever width you prefer */
+    padding: 20px;
+}
+
+/*#cartDetails {
     display: none;
     position: fixed;
     top: 40px;
@@ -220,20 +248,24 @@ footer {
     overflow: auto;
     max-height: calc(100vh - 50px);
     right: 0;
+}*/
+
+.cart-close {
+    margin-top: 30px;
 }
 
-.cartDetails img {
+#cartDetails img {
     width: 100px;
     height: auto;
 }
 
-.cartDetails .book-row {
+#cartDetails .book-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.cartDetails .book-row div {
+#cartDetails .book-row div {
     width: 40%;
 }
 
@@ -262,7 +294,7 @@ footer {
 
 #searchInput {
     font-size: 20px; 
-    padding: 10px 20px; 
+    padding: 5px 20px; 
     width: 50%; 
 }
 

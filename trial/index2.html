@@ -2,6 +2,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+
 
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top: 0; width: 100%;  z-index: 1;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top: 0; width: 100%;  z-index: 5;"> <!--Increased Z -index to 5 to stop interferance from the carousel-->
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img style="height: 5vh;border-radius: 30px;" src="logo.jpg" alt="GG go next"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,16 +36,26 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="search-container">
-                    <form class="d-flex">
-                        <input type="text" id="searchInput" placeholder="Search for a game..." oninput="searchGame()" style="width: 500px;">
-                        <div id="suggestions" class="suggestions-dropdown"></div>
-                    </form>
-                    <div id="suggestions"></div>
-                </div>
-                <div> <img class="cart" src="shopping_cart_FILL0_wght400_GRAD0_opsz24.png" alt="Shopping Cart" onclick="showCart()" width="30px"> </div>
-                <div class="cartDetails"></div>
             </div>
+
+            <div class="search-container">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search for a game..." oninput="searchGame()">
+                </div>
+                <div id="suggestions" class="suggestions-dropdown"></div>
+            </div>
+
+            <div class="cart-button-container">
+                <button class="btn btn-light" type="button" onclick="showCart()">
+                    <i class="bi bi-cart" style="font-size: 1.5rem; color: black;"></i>
+                    Cart
+                    <span id="cart-badge" class="badge bg-primary" style="margin-left: 5px;">0</span>
+                </button>
+            </div>
+            <div id="cartDetails"></div>
         </div>
     </nav>
     <hr>
@@ -564,12 +576,18 @@
         let cart = {};
         let checkoutWindow = null; // Declare checkoutWindow globally
 
+        function updateCartBadge() {
+            const totalItems = Object.values(cart).reduce((total, book) => total + book.quantity, 0);
+            document.getElementById('cart-badge').textContent = totalItems;
+        }
+
         function addToCart(book) {
             if (cart[book.id]) {
                 cart[book.id].quantity++;
             } else {
                 cart[book.id] = { ...book, quantity: 1 };
             }
+            updateCartBadge();
             if (document.getElementById('cartDetails').style.display === 'block') {
                 showCart();
             }
@@ -582,60 +600,112 @@
             } else {
                 delete cart[id];
             }
+            updateCartBadge();
             showCart();
+        }
+
+        //function hideCart() {
+        //    let cartDetails = document.getElementById('cartDetails');
+        //    cartDetails.style.display = 'none';
+        //}
+
+        //function showCart() {
+        //    let cartDetails = document.getElementById('cartDetails');
+        //    cartDetails.innerHTML = ''; // Clear the cartDetails content first
+
+        //    // Create a flex container for the heading and buttons
+        //    let headerContainer = document.createElement('div');
+        //    headerContainer.style.display = 'flex';
+        //    headerContainer.style.justifyContent = 'space-between';
+        //    headerContainer.style.alignItems = 'center';
+
+        //    // Create and append the "Your Cart" heading to the flex container
+        //    let cartHeading = document.createElement('h2');
+        //    cartHeading.textContent = 'Your Cart';
+        //    headerContainer.appendChild(cartHeading);
+
+        //    // Create and append the "Close Cart" button to the flex container
+        //    let closeButton = document.createElement('button');
+        //    closeButton.onclick = hideCart;
+        //    closeButton.textContent = 'Close Cart';
+        //    headerContainer.appendChild(closeButton);
+
+        //    // Create and append the "Checkout" button to the flex container
+        //    let checkoutButton = document.createElement('button');
+        //    checkoutButton.onclick = checkout;
+        //    checkoutButton.textContent = 'Checkout';
+        //    headerContainer.appendChild(checkoutButton);
+
+        //    // Append the flex container to the cartDetails
+        //    cartDetails.appendChild(headerContainer);
+
+        //    // Continue with the rest of the showCart function...
+        //    let bookRow = document.createElement('div');
+        //    bookRow.className = 'book-row';
+        //    Object.values(cart).forEach((book) => {
+        //        let bookElement = document.createElement('div');
+        //        bookElement.innerHTML = `<img src="${book.cover}" alt="${book.title} cover"><br>${book.title}<br>Price: ${book.price}<br>Quantity: ${book.quantity}<br><button onclick="removeFromCart('${book.id}')">Remove</button>`;
+        //        bookRow.appendChild(bookElement);
+        //    });
+        //    cartDetails.appendChild(bookRow);
+
+        //    if (Object.keys(cart).length === 0) {
+        //        cartDetails.style.display = 'none';
+        //    } else {
+        //        cartDetails.style.display = 'block';
+        //    }
+        //}
+
+        function showCart() {
+            let cartDetails = document.getElementById('cartDetails');
+            let isEmpty = true;
+            cartDetails.innerHTML = ''; // Clear the cartDetails content
+
+            // Add a title to the cart
+            let cartTitle = document.createElement('h2');
+            cartTitle.textContent = 'My Items';
+            cartTitle.style.textAlign = 'center'; // Center the title
+            cartDetails.appendChild(cartTitle);
+
+            let bookRow = document.createElement('div');
+            bookRow.className = 'book-row';
+
+            Object.values(cart).forEach((book) => {
+                isEmpty = false;
+                let bookElement = document.createElement('div');
+                bookElement.innerHTML =
+                        `<img src="${book.cover}" alt="${book.title} cover" style="width: 100px;"><br>
+                        ${book.title}<br>
+                        Price: ${book.price}<br>
+                        Quantity: ${book.quantity}<br>
+                        <button class="btn btn-danger btn-sm" onclick="removeFromCart('${book.id}')">Remove</button>`;
+                bookRow.appendChild(bookElement);
+            });
+
+            if (isEmpty) {
+                let emptyCartMessage = document.createElement('div');
+                emptyCartMessage.textContent = 'The Cart is Empty';
+                emptyCartMessage.style.textAlign = 'center';
+                emptyCartMessage.style.margin = '20px';
+                cartDetails.appendChild(emptyCartMessage);
+            } else {
+                cartDetails.appendChild(bookRow);
+            }
+
+            cartDetails.classList.add('open'); // Open the side panel
+
+            let closeButton = document.createElement('button');
+            closeButton.textContent = 'Close';
+            closeButton.onclick = hideCart;
+            closeButton.classList.add('btn', 'btn-secondary', 'cart-close'); // Bootstrap classes for styling
+            cartDetails.appendChild(closeButton);
         }
 
         function hideCart() {
             let cartDetails = document.getElementById('cartDetails');
-            cartDetails.style.display = 'none';
+            cartDetails.classList.remove('open'); // Close the side panel
         }
 
-        function showCart() {
-            let cartDetails = document.getElementById('cartDetails');
-            cartDetails.innerHTML = ''; // Clear the cartDetails content first
-
-            // Create a flex container for the heading and buttons
-            let headerContainer = document.createElement('div');
-            headerContainer.style.display = 'flex';
-            headerContainer.style.justifyContent = 'space-between';
-            headerContainer.style.alignItems = 'center';
-
-            // Create and append the "Your Cart" heading to the flex container
-            let cartHeading = document.createElement('h2');
-            cartHeading.textContent = 'Your Cart';
-            headerContainer.appendChild(cartHeading);
-
-            // Create and append the "Close Cart" button to the flex container
-            let closeButton = document.createElement('button');
-            closeButton.onclick = hideCart;
-            closeButton.textContent = 'Close Cart';
-            headerContainer.appendChild(closeButton);
-
-            // Create and append the "Checkout" button to the flex container
-            let checkoutButton = document.createElement('button');
-            checkoutButton.onclick = checkout;
-            checkoutButton.textContent = 'Checkout';
-            headerContainer.appendChild(checkoutButton);
-
-            // Append the flex container to the cartDetails
-            cartDetails.appendChild(headerContainer);
-
-            // Continue with the rest of the showCart function...
-            let bookRow = document.createElement('div');
-            bookRow.className = 'book-row';
-            Object.values(cart).forEach((book) => {
-                let bookElement = document.createElement('div');
-                bookElement.innerHTML = `<img src="${book.cover}" alt="${book.title} cover"><br>${book.title}<br>Price: ${book.price}<br>Quantity: ${book.quantity}<br><button onclick="removeFromCart('${book.id}')">Remove</button>`;
-                bookRow.appendChild(bookElement);
-            });
-            cartDetails.appendChild(bookRow);
-
-            if (Object.keys(cart).length === 0) {
-                cartDetails.style.display = 'none';
-            } else {
-                cartDetails.style.display = 'block';
-            }
-        }
 
         function checkout() {
             // If checkout window is not open, open a new one
@@ -755,9 +825,7 @@
             document.getElementById("myDropdown").classList.toggle("show");
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <img id="cart" src="shopping_cart_FILL0_wght400_GRAD0_opsz24.png" alt="Shopping Cart" onclick="showCart()" width="30px">
-    <div id="cartDetails"></div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
+</html>
