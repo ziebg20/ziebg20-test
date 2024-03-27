@@ -14,6 +14,20 @@ body {
       
 }
 
+.carousel-height {
+    height: 500px;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img,
+.carousel-item iframe {
+    height: 100%;
+    width: 100%; 
+    object-fit: cover; /* This ensures the content covers the area without distorting aspect ratio */
+}
 
 .small-jumbotron {
     height: 70vh;
