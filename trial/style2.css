@@ -201,14 +201,13 @@ footer {
     margin-top: 5vh;
 }
 
-#cart {
-    position: fixed;
+.cart {
     top: 10px;
     right: 10px;
     cursor: pointer;
 }
 
-#cartDetails {
+.cartDetails {
     display: none;
     position: fixed;
     top: 40px;
@@ -223,18 +222,18 @@ footer {
     right: 0;
 }
 
-#cartDetails img {
+.cartDetails img {
     width: 100px;
     height: auto;
 }
 
-#cartDetails .book-row {
+.cartDetails .book-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#cartDetails .book-row div {
+.cartDetails .book-row div {
     width: 40%;
 }
 
