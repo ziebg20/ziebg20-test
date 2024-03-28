@@ -669,6 +669,17 @@
             let isEmpty = true;
             cartDetails.innerHTML = ''; // Clear the cartDetails content
 
+            // Add a close button at the top right corner
+            let closeButton = document.createElement('button');
+            closeButton.innerHTML = '&times;'; // Using HTML entity for 'X'
+            closeButton.onclick = hideCart;
+            closeButton.classList.add('btn', 'btn-light'); // Bootstrap classes for styling
+            closeButton.style.position = 'absolute'; // Position it absolutely within the cartDetails
+            closeButton.style.top = '10px';
+            closeButton.style.left = '10px';
+            closeButton.style.fontSize = '20px';
+            cartDetails.appendChild(closeButton);
+
             // Add a title to the cart
             let cartTitle = document.createElement('h2');
             cartTitle.textContent = 'My Items';
@@ -698,15 +709,23 @@
                 cartDetails.appendChild(emptyCartMessage);
             } else {
                 cartDetails.appendChild(bookRow);
+                let checkoutButton = document.createElement('button');
+                checkoutButton.textContent = 'Checkout';
+                checkoutButton.onclick = checkout;
+                checkoutButton.classList.add('btn', 'btn-primary'); // Bootstrap classes for styling
+                checkoutButton.style.display = 'block'; // Ensure it's a block-level element for easier styling
+                checkoutButton.style.margin = '20px auto'; // Center the button in the cartDetails
+                cartDetails.appendChild(checkoutButton);
             }
 
             cartDetails.classList.add('open'); // Open the side panel
 
-            let closeButton = document.createElement('button');
-            closeButton.textContent = 'Close';
-            closeButton.onclick = hideCart;
-            closeButton.classList.add('btn', 'btn-secondary', 'cart-close'); // Bootstrap classes for styling
-            cartDetails.appendChild(closeButton);
+            //Removing old close button 
+            //let closeButton = document.createElement('button');
+            //closeButton.textContent = 'Close';
+            //closeButton.onclick = hideCart;
+            //closeButton.classList.add('btn', 'btn-secondary', 'cart-close'); // Bootstrap classes for styling
+            //cartDetails.appendChild(closeButton);
         }
 
         function hideCart() {
