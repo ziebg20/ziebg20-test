@@ -747,7 +747,7 @@
             checkoutWindow.document.write("<h1>Checkout Page</h1>");
 
             // Checkout Styles
-            checkoutWindow.document.write("<style>body {display; inline-block; justify-content: center; text-align:center; color: black; background-color: rgb(206, 201, 240); border: 10px solid black; font-weight:bold; font-family: 'Lucida Sans'; font-size:22px;} table {width: 100%; table-layout: fixed;} th, td {border: 5px solid black; text-align: center; vertical-align: middle; font-size: 24px; font-weight: bold;}</style>");
+            checkoutWindow.document.write("<style>body {display; inline-block; justify-content: center; text-align:center; color: black; background-color: rgb(255, 255, 255); border: 10px solid black; font-weight:bold; font-family: 'Lucida Sans'; font-size:22px;} table {width: 100%; table-layout: fixed;} th, td {border: 5px solid black; text-align: center; vertical-align: middle; font-size: 24px; font-weight: bold;}</style>");
 
             // Initialize total price
             let totalPrice = 0;
@@ -822,11 +822,11 @@
                 checkoutWindow.document.body.innerHTML = "<h1>Payment has been processed, thank you for your purchase</h1>";
 
                 // Set the color of the payment processed window to be the same as the checkout window
-                checkoutWindow.document.body.style.backgroundColor = "rgb(206, 201, 240)"
+                checkoutWindow.document.body.style.backgroundColor = "rgb(255, 255, 255)"
 
                 // Display the user's order details
                 checkoutWindow.document.write("<h2>Your Order:</h2>");
-                checkoutWindow.document.write("<style>body {display; inline-block; justify-content: center; text-align:center; color: black; background-color: rgb(206, 201, 240); border: 10px solid black; font-weight:bold; font-family: 'Lucida Sans'; font-size:22px;} table {width: 100%; table-layout: fixed;} th, td {border: 5px solid black; text-align: center; vertical-align: middle; font-size: 24px; font-weight: bold;}</style>");
+                checkoutWindow.document.write("<style>body {display; inline-block; justify-content: center; text-align:center; color: black; background-color: rgb(255, 255, 255); border: 10px solid black; font-weight:bold; font-family: 'Lucida Sans'; font-size:22px;} table {width: 100%; table-layout: fixed;} th, td {border: 5px solid black; text-align: center; vertical-align: middle; font-size: 24px; font-weight: bold;}</style>");
                 checkoutWindow.document.write("<table>");
 
                 // Generate HTML for each book in the cart
