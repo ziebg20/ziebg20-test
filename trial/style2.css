@@ -13,6 +13,48 @@ body {
     padding-top: 70px; 
       
 }
+#game-of-the-week h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.game-image {
+    transition: opacity 0.5s;
+    display: block;
+    width: 100%;
+}
+
+.game-description {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+    width: 100%;
+}
+
+.card-body:hover .game-description {
+    visibility: visible;
+    opacity: 1;
+}
+
+.description-content p {
+    margin: 0;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
 
 .carousel-height {
     height: 500px;
