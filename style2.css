@@ -284,9 +284,64 @@ footer {
 }
 
 #cartDetails.open {
-    width: 300px; /* Or whatever width you prefer */
+    width: 400px; /* Or whatever width you prefer */
     padding: 20px;
 }
+
+.book-item {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    background-color: #efefef;
+}
+
+.book-image {
+    margin-right: 10px;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.book-title {
+    margin-bottom: 5px;
+    text-align: left;
+    padding: 4px 8px;
+}
+
+.book-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8px
+}
+
+.quantity-adjuster {
+    display: flex;
+    align-items: center;
+}
+
+    .quantity-adjuster input[type="number"] {
+        width: 50px;
+        margin: 0 5px;
+        text-align: center;
+    }
+
+    .quantity-adjuster button {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        border: none;
+        background: #eee;
+        line-height: 30px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
 
 /*#cartDetails {
     display: none;
@@ -316,10 +371,6 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-#cartDetails .book-row div {
-    width: 40%;
 }
 
 .dropdown {

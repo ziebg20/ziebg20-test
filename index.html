@@ -597,16 +597,30 @@
 
             let bookRow = document.createElement('div');
             bookRow.className = 'book-row';
+            bookRow.style.display = 'flex';
+            bookRow.style.flexDirection = 'column';
 
             Object.values(cart).forEach((book) => {
                 isEmpty = false;
                 let bookElement = document.createElement('div');
-                bookElement.innerHTML =
-                    `<img src="${book.cover}" alt="${book.title} cover" style="width: 100px;"><br>
-                            ${book.title}<br>
-                            Price: ${book.price}<br>
-                            Quantity: ${book.quantity}<br>
-                            <button class="btn btn-danger btn-sm" onclick="removeFromCart('${book.id}')">Remove</button>`;
+                bookElement.className = 'book-item';
+                bookElement.style.display = 'flex';
+                bookElement.style.marginBottom = '10px';
+                bookElement.innerHTML = `
+        <div class="book-image">
+            <img src="${book.cover}" alt="${book.title} cover" style="width: 100px; height: auto;">
+        </div>
+        <div class="book-details">
+            <div class="book-title"><strong>${book.title}</strong></div>
+            <div class="book-bottom">
+                <span>${new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' }).format(book.price)}</span>
+                <div class="quantity-adjuster">
+                    <input type="number" value="${book.quantity}" min="1" onchange="updateQuantity('${book.id}', this.value)">
+                </div>
+                <button class="btn btn-danger btn-sm" onclick="removeFromCart('${book.id}')">Remove</button>
+            </div>
+        </div>
+    `;
                 bookRow.appendChild(bookElement);
             });
 
@@ -635,6 +649,18 @@
             //closeButton.onclick = hideCart;
             //closeButton.classList.add('btn', 'btn-secondary', 'cart-close'); // Bootstrap classes for styling
             //cartDetails.appendChild(closeButton);
+        }
+
+        // Function to change the quantity of an item in the cart
+        function updateQuantity(id, newQuantity) {
+            newQuantity = parseInt(newQuantity, 10);
+            if (cart[id] && newQuantity > 0) {
+                cart[id].quantity = newQuantity;
+            } else if (newQuantity < 1) {
+                // Optionally delete the item if the quantity is set to less than 1
+                delete cart[id];
+            }
+            showCart(); // Refresh the cart display
         }
 
         function hideCart() {
