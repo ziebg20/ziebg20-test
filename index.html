@@ -103,33 +103,34 @@
         </div>
     </div>
     <hr>
-    <div class="container">
-        <table class="fav_tbl" id="best-sellers">
-            <header style="margin-bottom: 5px;">Best Sellers</header>
-            <tr>
-                <td class="fav_tbl" id="top_left"><img src="images/eldenring.jpg" class="favourites"></td>
-                <td class="fav_tbl" id="mid_tbl"></td>
-                <td class="fav_tbl" id="top_right"><img src="images/helldivers2.jpg" class="favourites"></td>
-            </tr>
-            <tr>
-                <td class="fav_tbl" id="left">Elden Ring</td>
-                <td class="fav_tbl" id="mid_tbl"></td>
-                <td class="fav_tbl" id="right">Helldivers 2</td>
-            </tr>
-            <tr>
-                <td>$79.99</td>
-                <td id="mid_tbl"></td>
-                <td>$49.99</td>
-            </tr>
-            <tr>
-                <td class="fav_tbl" id="left"><button class="button" onclick="addToCart({id: 'eldenring', title: 'Elden Ring', cover: 'images/eldenring.jpg', price: 79.99,})">Add to cart</button></td>
-                <td class="fav_tbl" id="mid_tbl"></td>
-                <td class="fav_tbl" id="right"><button class="button" onclick="addToCart({id: 'helldivers2',title: 'Helldivers 2', cover: 'images/helldivers2.jpg', price: 59.99,})">Add to cart</button></td>
-            </tr>
-        </table>
+   <div class="container" id="best-sellers">
+    <h2 class="text-center my-4">Best Sellers</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/eldenring.jpg" class="card-img-top game-img"
+                    alt="Elden Ring">
+                    <div class="game-description">
+                        <div class="description-content">
+                            <div class="container my-4">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <h1 class="display-6"></h1>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
         <hr>
 
-        <!--I have changed this, if you do not like it we can go back to the other style.-->
         <div class="container" id="game-of-the-week">
             <h2 class="text-center my-4">Our Game Of The Week</h2>
             <div class="row justify-content-center">
@@ -170,102 +171,45 @@
 
 
 
-        <div class="tbl_format" id="souls-games">
-            <table id="gendisp">
-                <header style="margin-bottom: 1vh;">Souls Games</header>
-                <tr>
-                    <th>Dark Souls 3</th>
-                    <th>Elden Ring</th>
-                    <th>Sekiro: Shadows Die Twice</th>
-                </tr>
-                <tr>
-                    <td><img src="images/ds3.jpg"></td>
-                    <td><img src="images/eldenring.jpg"></td>
-                    <td><img src="images/sekiro.jpg"></td>
-                </tr>
-        </div>
-        <tr>
-            <td>$69.99</td>
-            <td>$79.99</td>
-            <td>$79.99</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="dropdown">
-                    <span>Game Description</span>
-                    <div class="dropdown-content">
-                        <p>
-                            Description
-                            Get the DARK SOULS™ III Season Pass now and challenge yourself with all the available content!
-
-                            Winner of gamescom award 2015 "Best RPG" and over 35 E3 2015 Awards and Nominations.
-
-                            DARK SOULS™ III continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series.
-
-                            As fires fade and the world falls into ruin, journey into a universe filled with more colossal enemies and environments. Players will be immersed into a world of epic atmosphere and darkness through faster gameplay and amplified combat intensity. Fans and newcomers alike will get lost in the game hallmark rewarding gameplay and immersive graphics.
-                            Now only embers remain… Prepare yourself once more and Embrace The Darkness!
-                        </p>
+       <div class="container" id="souls-games">
+    <h2 class="text-center my-4">Souls Games</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/ds3.jpg" class="card-img-top game-image" alt="Dark Souls 3">
+                    <div class="game-description">
+                        <div class="description-content">
+                            <div class="container my-4">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <h1 class="display-6">Dark Souls 3</h1>
+                                        <blockquote class="blockquote">
+                                            <p class="mb-0">Get the DARK SOULS™ III Season Pass now and challenge yourself with all the available content!</p>
+                                        </blockquote>
+                                        <p>
+                                            Winner of gamescom award 2015 "Best RPG" and over 35 E3 2015 Awards and Nominations.
+                                        </p>
+                                        <p>
+                                            DARK SOULS™ III continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series.
+                                        </p>
+                                        <!-- Add more description here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            <td>
-                <div class="dropdown">
-                    <span>Game Description</span>
-                    <div class="dropdown-content">
-                        <p>
-                            The Golden Order has been broken. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.
-
-                            ELDEN RING, developed by FromSoftware Inc. and produced by BANDAI NAMCO Entertainment Inc., is a fantasy action-RPG and FromSoftware’s largest game to date, set within a world full of mystery and peril.
-
-                            In the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has been shattered.
-
-                            Marika's offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of their newfound strength triggered a war: The Shattering. A war that meant abandonment by the Greater Will.
-
-                            And now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold and exiled from the Lands Between.
-
-                            Ye dead who yet live, your grace long lost, follow the path to the Lands Between beyond the foggy sea to stand before the Elden Ring.
-
-                            And become the Elden Lord.
-
-                            Key Features
-
-                            A NEW FANTASY WORLD
-                            Journey through the Lands Between, a new fantasy world created by Hidetaka Miyazaki, creator of the influential DARK SOULS video game series, and George R. R. Martin, author of The New York Times best-selling fantasy series, A Song of Ice and Fire. Unravel the mysteries of the Elden Ring’s power. Encounter adversaries with profound backgrounds, characters with their own unique motivations for helping or hindering your progress, and fearsome creatures.
-
-                            WORLD EXPLORATION IN THE LANDS BETWEEN
-                            ELDEN RING features vast fantastical landscapes and shadowy, complex dungeons that are connected seamlessly. Traverse the breathtaking world on foot or on horseback, alone or online with other players, and fully immerse yourself in the grassy plains, suffocating swamps, spiraling mountains, foreboding castles and other sites of grandeur on a scale never seen before in a FromSoftware title.
-
-                            GENRE-DEFINING GAMEPLAY
-                            Create your character in FromSoftware's refined action-RPG and define your playstyle by experimenting with a wide variety of weapons, magical abilities, and skills found throughout the world. Charge into battle, pick off enemies one-by-one using stealth, or even call upon allies for aid. Many options are at your disposal as you decide how to approach exploration and combat.
-                        </p>
-                    </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Dark Souls 3</h5>
+                    <p class="card-text">$69.99</p>
+                    <button class="btn btn-dark" onclick="addToCart({id: 'ds3', title: 'Dark Souls 3', cover: 'images/ds3.jpg', price: 69.99})">Add to cart</button>
                 </div>
-            </td>
-    </div>
-    </div>
-    </td>
-    <td>
-        <div class="dropdown">
-            <span>Game Description</span>
-            <div class="dropdown-content">
-                <p>
-                    Carve your own clever path to vengeance in the critically acclaimed adventure from developer FromSoftware, creators of the Dark Souls series.
-
-                    In Sekiro™: Shadows Die Twice you are the 'one-armed wolf', a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan. When the young lord is captured, nothing will stop you on a perilous quest to regain your honor, not even death itself.
-
-                    Explore late 1500s Sengoku Japan, a brutal period of constant life and death conflict, as you come face to face with larger than life foes in a dark and twisted world. Unleash an arsenal of deadly prosthetic tools and powerful ninja abilities while you blend stealth, vertical traversal, and visceral head to head combat in a bloody confrontation.
-
-                    Take Revenge. Restore Your Honour. Kill Ingeniously.
-                </p>
             </div>
         </div>
-    </td>
-    <tr>
-        <td><button class="button" onclick="addToCart({id: 'ds3', title: 'Dark Souls 3', cover: 'images/ds3.jpg', price: 69.99,})">Add to cart</button></td>
-        <td><button class="button" onclick="addToCart({id: 'eldenring', title: 'Elden Ring', cover: 'images/eldenring.jpg', price: 79.99,})">Add to cart</button></td>
-        <td><button class="button" onclick="addToCart({id: 'sekiro', title: 'Sekiro: Shadows Die Twice', cover: 'images/sekiro.jpg', price: 79.99,})">Add to cart</button></td>
-    </tr>
-    </table>
-    <hr>
+    </div>
+</div>
+
     <div class="tbl_format" id="shooter-games">
         <table id="gendisp">
             <header style="margin-bottom: 1vh;">Shooter Games</header>
