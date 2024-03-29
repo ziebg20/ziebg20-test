@@ -42,23 +42,26 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
     color: white;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s ease-in-out;
-    display: flex;
+    overflow: auto;
+    display: none;
     align-items: center;
-    justify-content: center;
+    padding: 10px; /* Add padding for better text readability */
 }
 
-.card-img-container:hover .game-description {
-    visibility: visible;
-    opacity: 1;
+.card-img-container {
+    position: relative;
+    /* other styles like width, height, etc. */
 }
 
-.description-content p {
-    margin: 0;
+    .card-img-container:hover .game-description {
+        display: block; /* Show the description on hover */
+    }
+
+.description-content {
+    max-height: 100%;
+    overflow-y: auto; /* Add scroll to the content directly if needed */
 }
 
 
