@@ -13,8 +13,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top: 0; width: 100%;  z-index: 5;">
-        <!--Increased Z -index to 5 to stop interferance from the carousel-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top: 0; width: 100%;  z-index: 5;"> <!--Increased Z -index to 5 to stop interferance from the carousel-->
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img style="height: 5vh;border-radius: 30px;" src="images/logo.jpg" alt="GG go next"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -116,21 +115,84 @@
                             <div class="container my-4">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
-                                        <h1 class="display-6"></h1>
-
+                                        <h1 class="display-6">The Golden Order has been broken. </h1>
+                                        <blockquote class="blockquote">
+                                            <p class="mb-0"> In the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has been shattered.</p>
+                                        </blockquote>
+                                        <p>
+                                            Marika's offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of their newfound strength triggered a war: The Shattering. A war that meant abandonment by the Greater Will.
+                                        </p>
+                                        <p>
+                                            And now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold and exiled from the Lands Between.  
+                                        </p>
+                                        <p>
+                                            Ye dead who yet live, your grace long lost, follow the path to the Lands Between beyond the foggy sea to stand before the Elden Ring.
+                                        </p>
+                                        <blockquote class="blockquote">
+                                        <p class="mb-0">
+                                            And become the Elden Lord.</p>
+                                        </blockquote>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Elden Ring</h5>
+                    <p class="card-text">$89.99</p>
+                    <button class="btn btn-dark" onclick="addToCart({id: 'eldenring', title: 'Elden Ring', cover: 'images/eldenring.jpg', price: 89.99})">Add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/helldivers2.jpg" class="card-img-top game-img"
+                    alt="Elden Ring">
+                    <div class="game-description">
+                        <div class="description-content">
+                            <div class="container my-4">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <h1 class="display-6">Fight for Super Earth!</h1>
+                                        <blockquote class="blockquote">
+                                            <p class="mb-0"> Freedom. Peace. Managed Democracy. Your Super Earth-born rights.</p>
+                                        </blockquote>
+                                        <p>
+                                            The key pillars of our civilization are under attack from deadly alien creatures conspiring to destroy your planet and its values.
+                                        </p>
+                                        <p>
+                                            The Helldivers must take on the role of peacekeepers in this Galactic War and protect their home planet, spread the message of Democracy and repel the hostiles by force.
+                                        </p>
+                                        <blockquote class="blockquote">
+                                            <p class="mb-0">Wield overpowered weapons!</p>
+                                        </blockquote>
+                                        <p>
+                                            Decide how to take down each enemy surge using a multitude of offensive and defensive tools
+                                        </p>
+                                        <p>
+                                            Need to take out a massive onslaught of Terminids in one go? Call in a hellpod drop a 500KG bomb, leaving behind only liberated bug corpses. Need to lay down a defensive perimeter? Bring in an Anti-Personnel Mine Deployer to boobytrap the battlefield. 
+                                        </p>
+                                        <p>
+                                            As you complete missions, you can upgrade your ship and build an even more impressive arsenal. Everything from shield generators, to turrets, to large-scale airstrikes can be used to give your team the upper-hand.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Helldivers 2</h5>
+                    <p class="card-text">$49.99</p>
+                    <button class="btn btn-dark" onclick="addToCart({id: 'helldivers2', title: 'Elden Ring', cover: 'images/helldivers2.jpg', price: 49.99})">Add to cart</button>
                 </div>
             </div>
         </div>
     </div>
-   </div>
+</div>
         <hr>
-
         <div class="container" id="game-of-the-week">
             <h2 class="text-center my-4">Our Game Of The Week</h2>
             <div class="row justify-content-center">
@@ -417,7 +479,7 @@
         </div>
         </td>
 
-    <tr>
+<tr>
         <td><button class="button" onclick="addToCart({id: 'mortal kombat 1', title: 'Mortal Kombat 1', cover: 'images/mk1.jpg', price: 99.99,})">Add to cart</button></td>
         <td><button class="button" onclick="addToCart({id: 'street fighter 6', title: 'Street Fighter 6', cover: 'images/sf6.jpg', price: 99.99,})">Add to cart</button></td>
         <td><button class="button" onclick="addToCart({id: 'tekken 8', title: 'Tekken 8', cover: 'images/t8.jpg', price: 114.99,})">Add to cart</button></td>
@@ -471,17 +533,12 @@
         </div>
         </div>
         </td>
-    <tr>
+<tr>
         <td><button class="button" onclick="addToCart({id: 'got', title: 'Ghost of Tsushima', cover: 'images/tsushima.jpg', price: 99.99,})">Add to cart</button></td>
         <td><button class="button" onclick="addToCart({id: 'batman', title: 'Batman: Arkham Knight', cover: 'images/batman.jpg', price: 64.99,})">Add to cart</button></td>
     </tr>
     </table>
     <hr>
-
-    <div class="modal-dialog modal-xl">
-        
-    </div>
-
     <footer>Contact us: gggonext@gmail.com,     0423 069 855</footer>
     <script>
         function searchGame() {
@@ -513,9 +570,9 @@
                     listItem.textContent = game;
                     listItem.addEventListener('click', function () {
                         window.location.assign(games[game]);
-                        searchInput.value = '';
+                        searchInput.value = ''; 
                         suggestions.textContent = '';
-                        suggestions.style.display = 'none';
+                        suggestions.style.display = 'none'; 
                     });
                     suggestionsList.appendChild(listItem);
                 });
@@ -602,11 +659,11 @@
                 isEmpty = false;
                 let bookElement = document.createElement('div');
                 bookElement.innerHTML =
-                    `<img src="${book.cover}" alt="${book.title} cover" style="width: 100px;"><br>
-                            ${book.title}<br>
-                            Price: ${book.price}<br>
-                            Quantity: ${book.quantity}<br>
-                            <button class="btn btn-danger btn-sm" onclick="removeFromCart('${book.id}')">Remove</button>`;
+                        `<img src="${book.cover}" alt="${book.title} cover" style="width: 100px;"><br>
+                        ${book.title}<br>
+                        Price: ${book.price}<br>
+                        Quantity: ${book.quantity}<br>
+                        <button class="btn btn-danger btn-sm" onclick="removeFromCart('${book.id}')">Remove</button>`;
                 bookRow.appendChild(bookElement);
             });
 
@@ -629,7 +686,7 @@
 
             cartDetails.classList.add('open'); // Open the side panel
 
-            //Removing old close button
+            //Removing old close button 
             //let closeButton = document.createElement('button');
             //closeButton.textContent = 'Close';
             //closeButton.onclick = hideCart;
