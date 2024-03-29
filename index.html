@@ -3,6 +3,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 <html lang="en">
@@ -13,7 +14,8 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top: 0; width: 100%;  z-index: 5;"> <!--Increased Z -index to 5 to stop interferance from the carousel-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top: 0; width: 100%;  z-index: 5;">
+        <!--Increased Z -index to 5 to stop interferance from the carousel-->
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img style="height: 5vh;border-radius: 30px;" src="images/logo.jpg" alt="GG go next"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,175 +104,176 @@
         </div>
     </div>
     <hr>
-   <div class="container" id="best-sellers">
-    <h2 class="text-center my-4">Best Sellers</h2>
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-img-container">
-                    <img src="images/eldenring.jpg" class="card-img-top game-img"
-                    alt="Elden Ring">
-                    <div class="game-description">
-                        <div class="description-content">
-                            <div class="container my-4">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-8">
-                                        <h1 class="display-6">The Golden Order has been broken. </h1>
-                                        <blockquote class="blockquote">
-                                            <p class="mb-0"> In the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has been shattered.</p>
-                                        </blockquote>
-                                        <p>
-                                            Marika's offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of their newfound strength triggered a war: The Shattering. A war that meant abandonment by the Greater Will.
-                                        </p>
-                                        <p>
-                                            And now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold and exiled from the Lands Between.  
-                                        </p>
-                                        <p>
-                                            Ye dead who yet live, your grace long lost, follow the path to the Lands Between beyond the foggy sea to stand before the Elden Ring.
-                                        </p>
-                                        <blockquote class="blockquote">
-                                        <p class="mb-0">
-                                            And become the Elden Lord.</p>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body text-center">
-                    <h5 class="card-title">Elden Ring</h5>
-                    <p class="card-text">$89.99</p>
-                    <button class="btn btn-dark" onclick="addToCart({id: 'eldenring', title: 'Elden Ring', cover: 'images/eldenring.jpg', price: 89.99})">Add to cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-img-container">
-                    <img src="images/helldivers2.jpg" class="card-img-top game-img"
-                    alt="Elden Ring">
-                    <div class="game-description">
-                        <div class="description-content">
-                            <div class="container my-4">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-8">
-                                        <h1 class="display-6">Fight for Super Earth!</h1>
-                                        <blockquote class="blockquote">
-                                            <p class="mb-0"> Freedom. Peace. Managed Democracy. Your Super Earth-born rights.</p>
-                                        </blockquote>
-                                        <p>
-                                            The key pillars of our civilization are under attack from deadly alien creatures conspiring to destroy your planet and its values.
-                                        </p>
-                                        <p>
-                                            The Helldivers must take on the role of peacekeepers in this Galactic War and protect their home planet, spread the message of Democracy and repel the hostiles by force.
-                                        </p>
-                                        <blockquote class="blockquote">
-                                            <p class="mb-0">Wield overpowered weapons!</p>
-                                        </blockquote>
-                                        <p>
-                                            Decide how to take down each enemy surge using a multitude of offensive and defensive tools
-                                        </p>
-                                        <p>
-                                            Need to take out a massive onslaught of Terminids in one go? Call in a hellpod drop a 500KG bomb, leaving behind only liberated bug corpses. Need to lay down a defensive perimeter? Bring in an Anti-Personnel Mine Deployer to boobytrap the battlefield. 
-                                        </p>
-                                        <p>
-                                            As you complete missions, you can upgrade your ship and build an even more impressive arsenal. Everything from shield generators, to turrets, to large-scale airstrikes can be used to give your team the upper-hand.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body text-center">
-                    <h5 class="card-title">Helldivers 2</h5>
-                    <p class="card-text">$49.99</p>
-                    <button class="btn btn-dark" onclick="addToCart({id: 'helldivers2', title: 'Elden Ring', cover: 'images/helldivers2.jpg', price: 49.99})">Add to cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-        <hr>
-        <div class="container" id="game-of-the-week">
-            <h2 class="text-center my-4">Our Game Of The Week</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-img-container">
-                            <img src="images/tsushima.jpg" class="card-img-top game-image" alt="Ghost of Tsushima">
-                            <div class="game-description">
-                                <div class="description-content">
-                                    <div class="container my-4">
-                                        <div class="row justify-content-center">
-                                            <div class="col-lg-8">
-                                                <h1 class="display-6">Explore Tsushima</h1>
-                                                <blockquote class="blockquote">
-                                                    <p class="mb-0"> In war-torn Tsushima, ancient beauty endures.</p>
-                                                </blockquote>
-                                                <p>
-                                                    Venture beyond the battlefield to experience feudal Japan like never before. In this open-world action adventure, you’ll roam vast countrysides and expansive terrain to encounter rich characters, discover ancient landmarks, and uncover the hidden beauty of Tsushima.
+    <div class="container" id="best-sellers">
+        <h2 class="text-center my-4">Best Sellers</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/eldenring.jpg" class="card-img-top game-img"
+                             alt="Elden Ring">
+                        <div class="game-description">
+                            <div class="description-content">
+                                <div class="container my-4">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <h1 class="display-6">The Golden Order has been broken. </h1>
+                                            <blockquote class="blockquote">
+                                                <p class="mb-0"> In the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has been shattered.</p>
+                                            </blockquote>
+                                            <p>
+                                                Marika's offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of their newfound strength triggered a war: The Shattering. A war that meant abandonment by the Greater Will.
+                                            </p>
+                                            <p>
+                                                And now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold and exiled from the Lands Between.
+                                            </p>
+                                            <p>
+                                                Ye dead who yet live, your grace long lost, follow the path to the Lands Between beyond the foggy sea to stand before the Elden Ring.
+                                            </p>
+                                            <blockquote class="blockquote">
+                                                <p class="mb-0">
+                                                    And become the Elden Lord.
                                                 </p>
-                                                <p>
-                                                    Explore meticulously-crafted regions showcasing diversity of life on the sprawling island—from billowing fields and tranquil shrines to ancient forests, villages, and stark mountainscapes. Find peace in the quiet moments of natural harmony and solace in the moments you’ll share with the people you help along the way.
-                                                </p>
-                                            </div>
+                                            </blockquote>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Ghost of Tsushima</h5>
-                            <p class="card-text">$99.99</p>
-                            <button class="btn btn-dark" onclick="addToCart({id: 'got', title: 'Ghost of Tsushima', cover: 'images/tsushima.jpg', price: 99.99})">Add to cart</button>
-                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Elden Ring</h5>
+                        <p class="card-text">$89.99</p>
+                        <button class="btn btn-dark" onclick="addToCart({id: 'eldenring', title: 'Elden Ring', cover: 'images/eldenring.jpg', price: 89.99})">Add to cart</button>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-
-       <div class="container" id="souls-games">
-    <h2 class="text-center my-4">Souls Games</h2>
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-img-container">
-                    <img src="images/ds3.jpg" class="card-img-top game-image" alt="Dark Souls 3">
-                    <div class="game-description">
-                        <div class="description-content">
-                            <div class="container my-4">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-8">
-                                        <h1 class="display-6">Dark Souls 3</h1>
-                                        <blockquote class="blockquote">
-                                            <p class="mb-0">Get the DARK SOULS™ III Season Pass now and challenge yourself with all the available content!</p>
-                                        </blockquote>
-                                        <p>
-                                            Winner of gamescom award 2015 "Best RPG" and over 35 E3 2015 Awards and Nominations.
-                                        </p>
-                                        <p>
-                                            DARK SOULS™ III continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series.
-                                        </p>
-                                        <!-- Add more description here -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/helldivers2.jpg" class="card-img-top game-img"
+                             alt="Elden Ring">
+                        <div class="game-description">
+                            <div class="description-content">
+                                <div class="container my-4">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <h1 class="display-6">Fight for Super Earth!</h1>
+                                            <blockquote class="blockquote">
+                                                <p class="mb-0"> Freedom. Peace. Managed Democracy. Your Super Earth-born rights.</p>
+                                            </blockquote>
+                                            <p>
+                                                The key pillars of our civilization are under attack from deadly alien creatures conspiring to destroy your planet and its values.
+                                            </p>
+                                            <p>
+                                                The Helldivers must take on the role of peacekeepers in this Galactic War and protect their home planet, spread the message of Democracy and repel the hostiles by force.
+                                            </p>
+                                            <blockquote class="blockquote">
+                                                <p class="mb-0">Wield overpowered weapons!</p>
+                                            </blockquote>
+                                            <p>
+                                                Decide how to take down each enemy surge using a multitude of offensive and defensive tools
+                                            </p>
+                                            <p>
+                                                Need to take out a massive onslaught of Terminids in one go? Call in a hellpod drop a 500KG bomb, leaving behind only liberated bug corpses. Need to lay down a defensive perimeter? Bring in an Anti-Personnel Mine Deployer to boobytrap the battlefield.
+                                            </p>
+                                            <p>
+                                                As you complete missions, you can upgrade your ship and build an even more impressive arsenal. Everything from shield generators, to turrets, to large-scale airstrikes can be used to give your team the upper-hand.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-body text-center">
-                    <h5 class="card-title">Dark Souls 3</h5>
-                    <p class="card-text">$69.99</p>
-                    <button class="btn btn-dark" onclick="addToCart({id: 'ds3', title: 'Dark Souls 3', cover: 'images/ds3.jpg', price: 69.99})">Add to cart</button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Helldivers 2</h5>
+                        <p class="card-text">$49.99</p>
+                        <button class="btn btn-dark" onclick="addToCart({id: 'helldivers2', title: 'Elden Ring', cover: 'images/helldivers2.jpg', price: 49.99})">Add to cart</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <hr>
+    <div class="container" id="game-of-the-week">
+        <h2 class="text-center my-4">Our Game Of The Week</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/tsushima.jpg" class="card-img-top game-image" alt="Ghost of Tsushima">
+                        <div class="game-description">
+                            <div class="description-content">
+                                <div class="container my-4">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <h1 class="display-6">Explore Tsushima</h1>
+                                            <blockquote class="blockquote">
+                                                <p class="mb-0"> In war-torn Tsushima, ancient beauty endures.</p>
+                                            </blockquote>
+                                            <p>
+                                                Venture beyond the battlefield to experience feudal Japan like never before. In this open-world action adventure, you’ll roam vast countrysides and expansive terrain to encounter rich characters, discover ancient landmarks, and uncover the hidden beauty of Tsushima.
+                                            </p>
+                                            <p>
+                                                Explore meticulously-crafted regions showcasing diversity of life on the sprawling island—from billowing fields and tranquil shrines to ancient forests, villages, and stark mountainscapes. Find peace in the quiet moments of natural harmony and solace in the moments you’ll share with the people you help along the way.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ghost of Tsushima</h5>
+                        <p class="card-text">$99.99</p>
+                        <button class="btn btn-dark" onclick="addToCart({id: 'got', title: 'Ghost of Tsushima', cover: 'images/tsushima.jpg', price: 99.99})">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" id="souls-games">
+        <h2 class="text-center my-4">Souls Games</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/ds3.jpg" class="card-img-top game-image" alt="Dark Souls 3">
+                        <div class="game-description">
+                            <div class="description-content">
+                                <div class="container my-4">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <h1 class="display-6">Dark Souls 3</h1>
+                                            <blockquote class="blockquote">
+                                                <p class="mb-0">Get the DARK SOULS™ III Season Pass now and challenge yourself with all the available content!</p>
+                                            </blockquote>
+                                            <p>
+                                                Winner of gamescom award 2015 "Best RPG" and over 35 E3 2015 Awards and Nominations.
+                                            </p>
+                                            <p>
+                                                DARK SOULS™ III continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series.
+                                            </p>
+                                            <!-- Add more description here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dark Souls 3</h5>
+                        <p class="card-text">$69.99</p>
+                        <button class="btn btn-dark" onclick="addToCart({id: 'ds3', title: 'Dark Souls 3', cover: 'images/ds3.jpg', price: 69.99})">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="tbl_format" id="shooter-games">
         <table id="gendisp">
@@ -479,7 +482,7 @@
         </div>
         </td>
 
-<tr>
+    <tr>
         <td><button class="button" onclick="addToCart({id: 'mortal kombat 1', title: 'Mortal Kombat 1', cover: 'images/mk1.jpg', price: 99.99,})">Add to cart</button></td>
         <td><button class="button" onclick="addToCart({id: 'street fighter 6', title: 'Street Fighter 6', cover: 'images/sf6.jpg', price: 99.99,})">Add to cart</button></td>
         <td><button class="button" onclick="addToCart({id: 'tekken 8', title: 'Tekken 8', cover: 'images/t8.jpg', price: 114.99,})">Add to cart</button></td>
@@ -533,11 +536,53 @@
         </div>
         </div>
         </td>
-<tr>
+    <tr>
         <td><button class="button" onclick="addToCart({id: 'got', title: 'Ghost of Tsushima', cover: 'images/tsushima.jpg', price: 99.99,})">Add to cart</button></td>
         <td><button class="button" onclick="addToCart({id: 'batman', title: 'Batman: Arkham Knight', cover: 'images/batman.jpg', price: 64.99,})">Add to cart</button></td>
     </tr>
     </table>
+
+    <!-- Modal for the checkout l-->
+
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="checkoutBody">
+                    <!-- Cart details will be inserted here -->
+                </div>
+                <div class="modal-body">
+                    <form id="paymentForm">
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" maxlength="19">
+                                <span class="input-group-text" id="cardIcon"><i class="far fa-credit-card"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="expiryDate" class="form-label">Expiry Date (MM/YY)</label>
+                            <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])/[0-9]{2}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cvv" placeholder="CVV" maxlength="3">
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="payNowButton" onclick="submitCheckout()">Pay Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <hr>
     <footer>Contact us: gggonext@gmail.com,     0423 069 855</footer>
     <script>
@@ -570,9 +615,9 @@
                     listItem.textContent = game;
                     listItem.addEventListener('click', function () {
                         window.location.assign(games[game]);
-                        searchInput.value = ''; 
+                        searchInput.value = '';
                         suggestions.textContent = '';
-                        suggestions.style.display = 'none'; 
+                        suggestions.style.display = 'none';
                     });
                     suggestionsList.appendChild(listItem);
                 });
@@ -664,20 +709,20 @@
                 bookElement.style.display = 'flex';
                 bookElement.style.marginBottom = '10px';
                 bookElement.innerHTML = `
-        <div class="book-image">
-            <img src="${book.cover}" alt="${book.title} cover" style="width: 100px; height: auto;">
-        </div>
-        <div class="book-details">
-            <div class="book-title"><strong>${book.title}</strong></div>
-            <div class="book-bottom">
-                <span>${new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' }).format(book.price)}</span>
-                <div class="quantity-adjuster">
-                    <input type="number" value="${book.quantity}" min="1" onchange="updateQuantity('${book.id}', this.value)">
-                </div>
-                <button class="btn btn-danger btn-sm" onclick="removeFromCart('${book.id}')">Remove</button>
-            </div>
-        </div>
-    `;
+                                    <div class="book-image">
+                                        <img src="${book.cover}" alt="${book.title} cover" style="width: 100px; height: auto;">
+                                    </div>
+                                    <div class="book-details">
+                                        <div class="book-title"><strong>${book.title}</strong></div>
+                                        <div class="book-bottom">
+                                            <span>${new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' }).format(book.price)}</span>
+                                            <div class="quantity-adjuster">
+                                                <input type="number" value="${book.quantity}" min="1" onchange="updateQuantity('${book.id}', this.value)">
+                                            </div>
+                                            <button class="btn btn-danger btn-sm" onclick="removeFromCart('${book.id}')">Remove</button>
+                                        </div>
+                                    </div>
+                                `;
                 bookRow.appendChild(bookElement);
             });
 
@@ -700,12 +745,6 @@
 
             cartDetails.classList.add('open'); // Open the side panel
 
-            //Removing old close button 
-            //let closeButton = document.createElement('button');
-            //closeButton.textContent = 'Close';
-            //closeButton.onclick = hideCart;
-            //closeButton.classList.add('btn', 'btn-secondary', 'cart-close'); // Bootstrap classes for styling
-            //cartDetails.appendChild(closeButton);
         }
 
         // Function to change the quantity of an item in the cart
@@ -727,118 +766,191 @@
 
 
         function checkout() {
-            // If checkout window is not open, open a new one
-            if (!checkoutWindow || checkoutWindow.closed) {
-                checkoutWindow = window.open("", "Checkout Window");
-            } else {
-                // If checkout window is already open, clear its content
-                checkoutWindow.document.body.innerHTML = '';
+            resetValidationStates();
+            let checkoutBody = document.getElementById('checkoutBody');
+            checkoutBody.innerHTML = ''; // Clear previous contents
 
-            }
-
-            // Set the title of the new window
-            checkoutWindow.document.write("<head><title>Checkout Page</title></head>");
-
-            // Write the cart data to the new window
-            checkoutWindow.document.write("<h1>Checkout Page</h1>");
-
-            // Checkout Styles
-            checkoutWindow.document.write("<style>body {display; inline-block; justify-content: center; text-align:center; color: black; background-color: rgb(255, 255, 255); border: 10px solid black; font-weight:bold; font-family: 'Lucida Sans'; font-size:22px;} table {width: 100%; table-layout: fixed;} th, td {border: 5px solid black; text-align: center; vertical-align: middle; font-size: 24px; font-weight: bold;}</style>");
-
-            // Initialize total price
             let totalPrice = 0;
+            let table = document.createElement('table');
+            table.className = 'table';
 
-            // Start the table
-            checkoutWindow.document.write("<table>");
-
-            // Generate HTML for each book in the cart
-            Object.values(cart).forEach((book) => {
-                checkoutWindow.document.write("<tr>");
-                checkoutWindow.document.write("<td><img src='" + book.cover + "' alt='" + book.title + " cover' style='width:200px;height:auto;'></td>");
-                checkoutWindow.document.write("<td>Title: " + book.title + "</td>");
-                checkoutWindow.document.write("<td>Price: " + book.price + "</td>");
-                checkoutWindow.document.write("<td>Quantity: " + book.quantity + "</td>");
-                checkoutWindow.document.write("</tr>");
-
-                // Add the price of the current book to the total price
+            Object.values(cart).forEach(book => {
+                let row = table.insertRow();
+                row.innerHTML = `
+                <td><img src="${book.cover}" alt="${book.title}" style="width:100px;height:auto;"></td>
+                <td>${book.title}</td>
+                <td>$${book.price}</td>
+                <td>${book.quantity}</td>
+            `;
                 totalPrice += book.price * book.quantity;
             });
 
-            // End the table
-            checkoutWindow.document.write("</table>");
+            checkoutBody.appendChild(table);
 
-            // Write the total price to the new window
-            checkoutWindow.document.write("<h2>Total Price: " + totalPrice.toFixed(2) + "</h2>");
+            let totalPriceElement = document.createElement('p');
+            totalPriceElement.innerHTML = `<strong>Total Price:</strong> $${totalPrice.toFixed(2)}`;
+            checkoutBody.appendChild(totalPriceElement);
 
-            // Add a mock secure payment feature
-            checkoutWindow.document.write("<h2>Payment Details</h2>");
-            checkoutWindow.document.write("<form id='paymentForm'>");
-            checkoutWindow.document.write("Card Number:<br><input type='text' id='cardNumber' pattern='\\d{16}' required><br>");
-            checkoutWindow.document.write("Expiry Date:<br><select id='expiryDate'>");
+            // Show the modal
+            let checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'));
+            checkoutModal.show();
+        }
 
-            // Generate options for each month of each year from 2024 to 2029
-            for (let year = 2024; year <= 2029; year++) {
-                for (let month = 1; month <= 12; month++) {
-                    let monthString = month < 10 ? '0' + month : month; // Ensure month is 2 digits
-                    checkoutWindow.document.write(`<option value='${monthString}/${year}'>${monthString}/${year}</option>`);
-                }
+        let isCardNumberValid = false;
+        let isExpiryDateValid = false;
+        let isCvvValid = false;
+
+        function submitCheckout() {
+            let cardNumberElement = document.getElementById('cardNumber');
+            let expiryDateElement = document.getElementById('expiryDate');
+            let cvvElement = document.getElementById('cvv');
+
+            let cardNumber = cardNumberElement.value.replace(/\s/g, ''); // Remove spaces
+            let expiryDate = expiryDateElement.value;
+            let cvv = cvvElement.value;
+
+            // Use the boolean flags for validation
+            if (!isCardNumberValid || !isExpiryDateValid || !isCvvValid) {
+                alert('Please enter valid payment details.');
+                return;
             }
 
-            checkoutWindow.document.write("</select><br>");
-            checkoutWindow.document.write("CVV:<br><input type='text' id='cvv' pattern='\\d{3}' required><br>");
-            checkoutWindow.document.write("<input type='submit' value='Submit'>");
-            checkoutWindow.document.write("</form>");
+            // Proceed with the payment process
+            console.log('Payment Details:', { cardNumber, expiryDate, cvv });
 
-            // Get the input elements
-            var cardNumber = checkoutWindow.document.getElementById('cardNumber');
-            var cvv = checkoutWindow.document.getElementById('cvv');
+            // Here would be your code to process the payment with a payment provider. ANd then wait for it to return a success or failure response.
+            // For the example, we'll simulate a successful payment if the card details are correct.
 
-            // Add input event listener to cardNumber
-            cardNumber.addEventListener('input', function () {
-                // Set custom validation message
-                cardNumber.setCustomValidity(cardNumber.validity.patternMismatch ? "Invalid card number. Please enter a 16-digit number." : "");
-            });
+            // Close the modal and handle post-payment process
+            let checkoutModal = bootstrap.Modal.getInstance(document.getElementById('checkoutModal'));
+            checkoutModal.hide();
 
-            // Add input event listener to cvv
-            cvv.addEventListener('input', function () {
-                // Set custom validation message
-                cvv.setCustomValidity(cvv.validity.patternMismatch ? "Invalid CVV. Please enter a 3-digit number." : "");
-            });
+            // Clear the cart, credit card details and show a success message
+            alert('Payment has been processed, thank you for your purchase.');
+            cart = {}; // Clear the cart
+            updateCartBadge(); // Update the cart badge to reflect the empty cart
+            hideCart(); // Update the cart display
 
-            // Add event listener to form submit
-            checkoutWindow.document.getElementById('paymentForm').addEventListener('submit', function (event) {
-                // Prevent form from submitting normally
-                event.preventDefault();
+            // Clear credit card fields
+            cardNumberElement.value = '';
+            expiryDateElement.value = '';
+            cvvElement.value = '';
 
-                // Check validity
-                cardNumber.checkValidity();
-                cvv.checkValidity();
-
-                // Clear the window and display the success message
-                checkoutWindow.document.body.innerHTML = "<h1>Payment has been processed, thank you for your purchase</h1>";
-
-                // Set the color of the payment processed window to be the same as the checkout window
-                checkoutWindow.document.body.style.backgroundColor = "rgb(255, 255, 255)"
-
-                // Display the user's order details
-                checkoutWindow.document.write("<h2>Your Order:</h2>");
-                checkoutWindow.document.write("<style>body {display; inline-block; justify-content: center; text-align:center; color: black; background-color: rgb(255, 255, 255); border: 10px solid black; font-weight:bold; font-family: 'Lucida Sans'; font-size:22px;} table {width: 100%; table-layout: fixed;} th, td {border: 5px solid black; text-align: center; vertical-align: middle; font-size: 24px; font-weight: bold;}</style>");
-                checkoutWindow.document.write("<table>");
-
-                // Generate HTML for each book in the cart
-                Object.values(cart).forEach((book) => {
-                    checkoutWindow.document.write("<tr>");
-                    checkoutWindow.document.write("<td style='border: 1px solid black;'><img src='" + book.cover + "' alt='" + book.title + " cover' style='width:200px;height:auto;'></td>");
-                    checkoutWindow.document.write("<td style='border: 1px solid black;'>Title: " + book.title + "</td>");
-                    checkoutWindow.document.write("<td style='border: 1px solid black;'>Price: " + book.price + "</td>");
-                    checkoutWindow.document.write("<td style='border: 1px solid black;'>Quantity: " + book.quantity + "</td>");
-                    checkoutWindow.document.write("</tr>");
-                });
-
-                checkoutWindow.document.write("</table>");
-            });
-
+            // Reset validation states
+            isCardNumberValid = false;
+            isExpiryDateValid = false;
+            isCvvValid = false;
+            resetValidationStates();
+            checkCheckoutEligibility(); // Check to disable the Pay Now button as the fields are cleared
         }
+
+        document.getElementById('cardNumber').addEventListener('input', function () {
+            // Remove any non-digit characters
+            let value = this.value.replace(/\D/g, '');
+            // Add a space after every 4 digits
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ') ?? '';
+            // Update the value of the input field
+            this.value = formattedValue;
+
+            // Luhn Algorithm for real-time credit card validation
+            let isValid = checkLuhn(value.replace(/\s/g, ''));
+            this.classList.toggle('is-valid', isValid);
+            this.classList.toggle('is-invalid', !isValid);
+
+            // Get the i element inside the cardIcon span
+            const cardIconElement = document.querySelector('#cardIcon i');
+            // Reset to default credit card icon
+            cardIconElement.className = 'far fa-credit-card';
+
+            if (/^4/.test(value) && isValid) {
+                // Visa
+                cardIconElement.className = 'fab fa-cc-visa';
+            } else if (/^(5[1-5]|2[2-7])/.test(value) && isValid) {
+                // Mastercard
+                cardIconElement.className = 'fab fa-cc-mastercard';
+            }
+
+            isCardNumberValid = isValid;
+            checkCheckoutEligibility();
+        });
+
+        document.getElementById('expiryDate').addEventListener('input', function () {
+            let input = this.value.replace(/\//g, '').replace(/\D/g, '');
+            if (input.length >= 2) {
+                input = input.substring(0, 2) + '/' + input.substring(2, 4);
+            }
+            this.value = input;
+
+            const regex = /^(0[1-9]|1[0-2])\/(\d{2})$/;
+            isExpiryDateValid = regex.test(input);
+            if (isExpiryDateValid) {
+                this.classList.add('is-valid');
+                this.classList.remove('is-invalid');
+            } else {
+                this.classList.add('is-invalid');
+                this.classList.remove('is-valid');
+            }
+
+            checkCheckoutEligibility();
+        });
+
+        document.getElementById('cvv').addEventListener('input', function () {
+            const cvvValue = this.value;
+            isCvvValid = /^\d{3}$/.test(cvvValue);  // Validate for exactly 3 digits
+
+            if (isCvvValid) {
+                this.classList.add('is-valid');
+                this.classList.remove('is-invalid');
+            } else {
+                this.classList.add('is-invalid');
+                this.classList.remove('is-valid');
+            }
+
+            checkCheckoutEligibility();
+        });
+
+        function checkCheckoutEligibility() {
+            const checkoutButton = document.getElementById('payNowButton'); 
+            if (isCardNumberValid && isExpiryDateValid && isCvvValid) {
+                checkoutButton.disabled = false;
+            } else {
+                checkoutButton.disabled = true;
+            }
+        }
+
+        function resetValidationStates() {
+            document.getElementById('cardNumber').classList.remove('is-valid', 'is-invalid');
+            document.getElementById('expiryDate').classList.remove('is-valid', 'is-invalid');
+            document.getElementById('cvv').classList.remove('is-valid', 'is-invalid');
+
+            //reset the card icon to its default state
+            const cardIconElement = document.querySelector('#cardIcon i');
+            cardIconElement.className = 'far fa-credit-card';
+        }
+
+        // he Luhn algorithm or modulus 10 algorithm, is a simple formula used to validate numbers, 
+        // but it's most used for credit card numbers. 
+        function checkLuhn(value) {
+            let sum = 0;
+            let shouldDouble = false;
+            // Loop through values starting from the rightmost one
+            for (let i = value.length - 1; i >= 0; i--) {
+                let digit = parseInt(value.charAt(i));
+
+                if (shouldDouble) {
+                    digit *= 2;
+                    if (digit > 9) {
+                        digit -= 9;
+                    }
+                }
+
+                sum += digit;
+                shouldDouble = !shouldDouble;
+            }
+
+            return sum % 10 === 0;
+        }
+
 
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
